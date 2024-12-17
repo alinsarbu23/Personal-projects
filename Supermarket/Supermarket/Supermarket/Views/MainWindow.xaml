@@ -1,0 +1,42 @@
+﻿<Window x:Class="Supermarket.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Supermarket" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="0,2,0,0" RenderTransformOrigin="0.556,0.514">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Resources/MainWindow.jpg"/>
+            </StackPanel.Background>
+
+            <!-- Adăugarea titlului -->
+            <TextBlock Text="Supermarket" 
+                       FontSize="32" 
+                       FontWeight="Bold" 
+                       Foreground="White" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,20,0,10" Width="316"/>
+
+        </StackPanel>
+
+        <!-- Adăugarea butoanelor pentru module -->
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Height="195" Margin="0,159,0,0" Width="500">
+            <!-- Butonul pentru modulul de administrator -->
+            <Button Content="Administrator"
+                    FontSize="20"
+                    Margin="10"
+                    Click="AdministratorButton_Click" Height="45" Width="204" Background="#FF25252F" Foreground="White" FontWeight="Bold" BorderBrush="#FFFFC939"/>
+
+            <!-- Butonul pentru modulul de casier -->
+            <Button Content="Casier"
+                    FontSize="20"
+                    Margin="10"
+                    Click="CashierButton_Click" Width="204" Height="45" FontWeight="Bold" Foreground="#FFFFFEFE" Background="#FF25252F" BorderBrush="#FFFFC939"/>
+        </StackPanel>
+
+        <!-- Adăugarea unui TextBox pentru introducerea numelui categoriei -->
+
+        <!-- Adăugarea unui buton pentru adăugarea unei noi categorii -->
+
+        <!-- Adăugarea unui DataGrid pentru afișarea categoriilor -->
+    </Grid>
+</Window>

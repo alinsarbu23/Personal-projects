@@ -1,0 +1,40 @@
+﻿<Window x:Class="Supermarket.Views.AdministratorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Supermarket.Views"
+        mc:Ignorable="d"
+        Title="AdministratorWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/MenuWindow.png"/>
+        </Grid.Background>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Width="150">
+            <ComboBox x:Name="TablesComboBox" Width="130" Margin="10" SelectionChanged="TablesComboBox_SelectionChanged">
+                <ComboBoxItem Content="Produse"/>
+                <ComboBoxItem Content="Stocuri"/>
+                <ComboBoxItem Content="Utilizatori"/>
+                <ComboBoxItem Content="Producatori"/>
+                <ComboBoxItem Content="Bonuri"/>
+                <ComboBoxItem Content="Categorii"/>
+            </ComboBox>
+
+            <Button Content="Adaugă" Width="100" Margin="10" Click="AddButton_Click" FontWeight="Bold" BorderBrush="Black"/>
+            <Button Content="Actualizează" Width="100" Margin="10" Click="UpdateButton_Click" BorderBrush="Black" FontWeight="Bold"/>
+            <Button Content="Șterge" Width="100" Margin="10" Click="DeleteButton_Click" BorderBrush="Black" FontWeight="Bold"/>
+            <Button Content="Produse după categorie" Width="150" Margin="10" Click="ProductByCategoryButton_Click" BorderBrush="Black" FontWeight="Bold"/>
+           
+
+        </StackPanel>
+
+        <Grid Margin="150,10,10,10" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <DataGrid x:Name="DataGrid" AutoGenerateColumns="True"/>
+        </Grid>
+
+        <Grid Margin="4,10,16,10" Width="Auto" Height="Auto">
+            <DataGrid x:Name="SelectedTableDataGrid" AutoGenerateColumns="True" Margin="145,34,10,40" />
+        </Grid>
+    </Grid>
+</Window>
